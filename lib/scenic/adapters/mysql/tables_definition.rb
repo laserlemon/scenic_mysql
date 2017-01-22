@@ -10,7 +10,7 @@ module Scenic
           wheres = ["table_type = 'BASE TABLE'"]
 
           if database
-            wheres << "table_schema = #{quote_table_name(database)}"
+            wheres << "table_schema = #{quote(database)}"
           else
             wheres << "table_schema = SCHEMA()"
           end
